@@ -10,6 +10,10 @@ O objetivo desta imagem é fornecer uma base Ubuntu com customizações úteis p
 
 Este repositório contém uma imagem Docker base utilizando Ubuntu.
 
+<p>
+  <img src="assets/images/readme.png" alt="Galilee Walker" width="600"/>
+</p>
+
 ## 📋 Requisitos
 
 - Podman (recomendado) ou Docker instalado
