@@ -1,0 +1,34 @@
+name: Publish to GitHub Container Registry
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+*'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Podman
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y podman
+
+      - name: GitHub Registry login
+        env:
+          CR_USERNAME: ${{ github.actor }}
+          CR_PAT: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo $CR_PAT | podman login ghcr.io -u $CR_USERNAME --password-stdin
+
+      - name: Build image
+        run: |
+          podman build -t ghcr.io/${{ github.actor }}/galilee-walker:${{ github.ref_name }} .
+
+      - name: Push image to GitHub Container Registry
+        run: |
+          podman push ghcr.io/${{ github.actor }}/galilee-walker:${{ github.ref_name }}

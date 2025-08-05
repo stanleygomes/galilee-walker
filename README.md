@@ -6,6 +6,8 @@
 
 # 🐳 Galilee Walker
 
+## 🚀 A better Ubuntu container starter
+
 O objetivo desta imagem é fornecer uma base Ubuntu com customizações úteis para o dia a dia de desenvolvimento. Ela inclui configurações de terminal personalizadas, suporte a exibição de branch do Git, e pode ser facilmente expandida para atender diferentes necessidades de ambientes de desenvolvimento. Ideal para quem busca praticidade, produtividade e um ambiente inicial já otimizado para tarefas comuns.
 
 Este repositório contém uma imagem Docker base utilizando Ubuntu.
