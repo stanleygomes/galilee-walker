@@ -1,5 +1,5 @@
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
-![Build Status](https://img.shields.io/github/actions/workflow/status/stanleygomes/galilee-walker/deploy.yml)
+![Build Status](https://img.shields.io/github/actions/workflow/status/stanleygomes/galilee-walker/docker-hub-publish.yaml)
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 ![Open Issues](https://img.shields.io/github/issues/stanleygomes/galilee-walker)
 ![Contributors](https://img.shields.io/github/contributors/stanleygomes/galilee-walker)
