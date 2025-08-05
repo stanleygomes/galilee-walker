@@ -16,7 +16,7 @@ Este repositório contém uma imagem Docker base utilizando Ubuntu.
 
 ## 📋 Requisitos
 
-- Podman (recomendado) ou Docker instalado
+- Podman (recomendado) ou Docker instalado.
 
 ## 🛠️ Uso
 
