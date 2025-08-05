@@ -38,17 +38,12 @@ podman push ghcr.io/stanleygomes/galilee-walker:latest
 
 1. Construa a imagem:
    ```sh
-   podman build -t galilee-walker:local .
+   podman build -t galilee-walker:latest .
    ```
 
 2. Execute o container de forma interativa:
    ```sh
-   podman run -it galilee-walker:local
-   ```
-
-3. Visualize o container em execução:
-   ```sh
-   podman ps
+   podman run -it galilee-walker:latest
    ```
 
 ## 🚀 Versionamento, Release e Deploy (CI/CD)
