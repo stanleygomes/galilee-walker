@@ -13,4 +13,8 @@ RUN curl
 # Set working directory
 WORKDIR /app
 
+# Copy custom bashrc config and append to .bashrc
+COPY src/bashrc_custom /tmp/bashrc_custom
+RUN cat /tmp/bashrc_custom >> /root/.bashrc && rm /tmp/bashrc_custom
+
 CMD ["bash"]
