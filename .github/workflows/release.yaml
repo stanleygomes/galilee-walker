@@ -50,3 +50,7 @@ jobs:
           add-paths: |
             CHANGELOG.md
           delete-branch: true
+
+      - name: Push tags to remote
+        run: |
+          git push --tags
