@@ -1,0 +1,33 @@
+name: Publish to Docker Hub
+
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Podman
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y podman
+
+      - name: Docker Hub login
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: |
+          echo $DOCKER_PASSWORD | podman login --username $DOCKER_USERNAME --password-stdin docker.io
+
+      - name: Build image
+        run: |
+          podman build -t docker.io/${{ secrets.DOCKER_USERNAME }}/galilee-walker:${{ github.ref_name }} .
+
+      - name: Push image to Docker Hub
+        run: |
+          podman push docker.io/${{ secrets.DOCKER_USERNAME }}/galilee-walker:${{ github.ref_name }}
