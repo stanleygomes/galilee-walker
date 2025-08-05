@@ -1,0 +1,30 @@
+# Ignore OS files
+*.DS_Store
+Thumbs.db
+
+# Ignore node dependencies
+node_modules/
+
+# Ignore Python dependencies
+__pycache__/
+*.pyc
+
+# Ignore logs
+*.log
+
+# Ignore environment files
+.env
+
+# Ignore build output
+/dist/
+/build/
+
+# Ignore VCS files
+.git/
+
+# Ignore Docker files
+.dockerignore
+
+# Ignore editor/project files
+.vscode/
+.idea/
