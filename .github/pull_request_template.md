@@ -1,6 +1,6 @@
 # 🚀 Pull Request Details
 
-> 📋 **Antes de abrir este PR**, certifique-se de ter lido as [regras de contribuição](../CONTRIBUTING.md) para garantir que seu Pull Request siga nossos padrões e seja aceito rapidamente.
+> 📋 **Antes de abrir este PR**, certifique-se de ter lido as [regras de contribuição](../README.md#-como-contribuir) para garantir que seu Pull Request siga nossos padrões e seja aceito rapidamente.
 
 ## 📝 Description
 
